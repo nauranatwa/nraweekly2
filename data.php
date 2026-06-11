@@ -11,26 +11,41 @@
 
     <table border="1" align="center" cellpadding="10" cellspacing="0">
         <tr>
-        <td><a href="index.html">Home</a></td>
-        <td><a href="biodata.html">Biodata</a></td>
-        <td><a href="contact.html">Contact</a></td>
-        <td><a href="data.html">Data</a></td>
-        <td><a href="students.html">Students</a></td>
+        <td><a href="index.php">Home</a></td>
+        <td><a href="biodata.php">Biodata</a></td>
+        <td><a href="contact.php">Contact</a></td>
+        <td><a href="data.php">Data</a></td>
+        <td><a href="students.php">Students</a></td>
         </tr>
     </table>
 
     <br><br>
     
     <h2 align="center">Data</h2>
+    <a align="center" href="add_data.php"><button>Add Data</button></a>
     <table border="1" align="center" cellpadding="5">
         <tr>
-            <td rowspan="2">Baris 1 dan 2, Kolom 1</td>
-            <td colspan="2">Baris 1, Kolom 2</td>
+            <th>No</th>
+            <th>Nama</th>
+            <th>NIM</th>
+            <th>Program Studi</th>
+            <th>Email</th>
+            <th>WhatsApp</th>
+            <th>Foto</th>
+            <th>Action</th>
         </tr>
         <tr>
-            <td>Baris 2, Kolom 2</td>
-            <td>Baris 2, Kolom 3</td>
-            <!-- <td>Baris 2, Kolom 3</td> -->
+            <td>1</td>
+            <td>Naura Natwa A</td>
+            <td>13242520052</td>
+            <td>Teknologi Informasi</td>
+            <td>nauranatss@gmail.com</td>
+            <td>085657437308</td>
+            <td><img src="Naura.jpg" width="100"></td>
+            <td>
+                <a href="editdata.php"><button>Edit</button></a>
+                <a href="deletedata.php"><button>Delete</button></a>
+            </td>
         </tr>
     </table>
 
