@@ -22,12 +22,14 @@ h3 {
 table {
     margin-top: 15px;
     border-collapse: collapse;
+    table-layout: fixed;
+    width: 80%;
     background-color: #d6efff;
     border-radius: 8px;
     overflow: hidden;
 }
 
-table td {
+table td,th {
     padding: 10px 20px;
     text-align: center;
     transition: 0.2s;
