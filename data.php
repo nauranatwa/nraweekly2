@@ -30,12 +30,8 @@ $mahasiswas = tampildata($query);
 <br><br>
 
 <h2 align="center">Data</h2>
-
-<p align="center">
-    <a href="add_data.php">
-        <button>Add Data</button>
-    </a>
-</p>
+<a href="students.php"><button>Add Data</button>
+</a>
 
 <table border="1" align="center" cellpadding="5">
     <tr>
@@ -44,7 +40,7 @@ $mahasiswas = tampildata($query);
         <th>NIM</th>
         <th>Program Studi</th>
         <th>Email</th>
-        <th>WhatsApp</th>
+        <th>No HP</th>
         <th>Foto</th>
         <th>Action</th>
     </tr>
