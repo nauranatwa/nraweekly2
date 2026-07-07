@@ -30,13 +30,15 @@
         $email = htmlspecialchars($data["email"]);
         $no_hp = htmlspecialchars($data["no_hp"]);
 
-        $namafoto = $_FILES["name"];
-        $tmpfoto = $_FILES["tmp_name"];
-        $path = "Assets/$namafoto";
+        $namafoto = $_FILES["foto"]["name"];
+        $tmpfoto = $_FILES["foto"]["tmp_name"];
+
+        $newnamafoto = date("dmYHis_") . $namafoto;
+        $path = "Assets/" . $newnamafoto;
 
         if (move_uploaded_file($tmpfoto, $path)) {
         $query = "INSERT INTO mahasiswa (nama, nim, prodi, email, no_hp, foto) 
-        VALUES ('$nama', '$nim', '$prodi', '$email', '$no_hp', '$namafoto')";
+        VALUES ('$nama', '$nim', '$prodi', '$email', '$no_hp', '$newnamafoto')";
         mysqli_query($koneksi, $query);
         }
 
@@ -51,7 +53,13 @@
         $prodi = htmlspecialchars($data["prodi"]);
         $email = htmlspecialchars($data["email"]);
         $no_hp = htmlspecialchars($data["no_hp"]);
-        $foto = htmlspecialchars($data["foto"]);
+
+        $namafoto = $_FILES["foto"]["name"];
+        $tmpfoto = $_FILES["foto"]["tmp_name"];
+        $path = "Assets/" . $namafoto;
+
+        if (move_uploaded_file($tmpfoto, $path)) {
+        }
 
         $query = "UPDATE mahasiswa SET 
                     nama = '$nama',
@@ -59,7 +67,7 @@
                     prodi = '$prodi',
                     email = '$email',
                     no_hp = '$no_hp',
-                    foto = '$foto'
+                    foto = '$newnamafoto'
                 WHERE id = $id";
 
         mysqli_query($koneksi, $query);
